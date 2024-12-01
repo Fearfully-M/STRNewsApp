@@ -146,3 +146,9 @@ def get_YouTube():
         # Return an error if no category is specified
         #return jsonify({"error": "No category specified"}), 400
         return render_template("YouTube.html", videos = None, quote = QUOTE, shares = SHARES, NAV_ACTIVE = NAV_ACTIVE)
+
+
+if __name__ == '__main__':
+    # Get the PORT from the environment variable, default to 5000 for local development
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
