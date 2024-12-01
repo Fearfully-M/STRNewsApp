@@ -12,6 +12,7 @@ from startTheRippleFunctions import (
 import json
 
 # Configure application
+app.run(host="0.0.0.0", port=port)
 app = Flask(__name__)
 
 # the idea to simply cache like this was inspired by ChatGPT
