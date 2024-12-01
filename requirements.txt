@@ -1,3 +1,4 @@
+quotes_library==0.4
 Flask==3.0.3
 Flask-Session==0.8.0
 huggingface-hub==0.26.2
@@ -5,7 +6,9 @@ Jinja2==3.1.4
 langdetect==1.0.9
 nltk==3.9.1
 python-dotenv==1.0.1
+quotes_library==0.4
 requests==2.32.3
 tokenizers==0.20.3
+torch==2.5.1
 transformers==4.46.3
 youtube-transcript-api==0.6.3
