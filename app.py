@@ -150,6 +150,7 @@ def get_YouTube():
 
 
 if __name__ == '__main__':
-    # Get the PORT from the environment variable, default to 5000 for local development
-    port = int(os.environ.get("PORT", 5000))
+    # Get the PORT from the environment variable, default to 10000 (For Render deployment)
+    port = int(os.environ.get("PORT", 10000))
+    # Bind the app to 0.0.0.0 and the specified port
     app.run(host="0.0.0.0", port=port)
