@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    YouTube
+{% endblock %}
+
+{% block homenavbar %}
+
+<a href="/" class="nav-link custom-nav-niche-items">Home</a>
+<input type="submit" name="category" value="Tech" class="nav-link custom-nav-niche-items nav-link" ></input>
+<input type="submit" name="category" value="Health" class="nav-link custom-nav-niche-items nav-link"></input>
+<input type="submit" name="category" value="Science" class="nav-link custom-nav-niche-items nav-link"></input>
+<input type="submit" name="category" value="Education" class="nav-link custom-nav-niche-items nav-link"></input>
+
+{% endblock %}
+
+{% block navbar %}
+<form method="GET" action="/YouTube">
+    <input type="submit" name="category" value="YouTube" class="nav-link custom-nav-niche-items nav-link {{ NAV_ACTIVE }}"></input>
+</form>
+</div>
+</nav>
+{% endblock %}
+
+
+{% block main %}
+
+<div class="quote-of-the-day" style="padding-top: 1.5em;">
+    <h3 class="container text-center" style="color: #00796b;">
+        <form method="GET" action="/YouTube">
+            <label for="category">Choose a category:</label> 
+            <select name="category" id="category">
+                <option value=""></option>
+                <option value="Tech">Tech</option>
+                <option value="Health">Health</option>
+                <option value="Science">Science</option>
+                <option value="Education">Education</option>
+            </select>
+            <button type="submit" class ='btn btn-primary'>Submit</button>
+        </form>
+    </h3>
+</div>
+<br>
+
+{% if videos %}
+<!-- Beginning of stacking columns -->
+<div class="container text-center">
+    
+    {% for video in videos %}
+    {% if loop.index is odd %}
+        <div class="row d-flex align-items-stretch">
+            
+            <div class="col" style="padding: 0; background-color: #4e342e;">
+                <iframe style="padding: 0px; margin: 0;" width="660" height="352" 
+                    src="https://www.youtube.com/embed/{{ video['id']['videoId'] }}" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="col position-relative"  style="background-color: #4e342e; color: #f5ede4; margin: 0; padding: 0;">
+                <h3 class="highlight-of-the-day">{{ video['snippet']['title']}}</h3>
+                <div class="container text-center">
+                    <p>{{ video['id']['videoId'] | YouTube_Transcript }}</p>
+                </div>
+                <span class="bottom-right-text">Uploaded on: {{video['snippet']['publishTime'] | date_format }}</span>
+            </div>
+         
+        </div>
+
+    <br>
+
+    {% else %}
+        <div class="row d-flex align-items-stretch">
+            <div class="col position-relative"  style="background-color: #4e342e; color: #f5ede4; margin: 0; padding: 0;">
+                <h3 class="highlight-of-the-day">{{ video['snippet']['title']}}</h3>
+                <div class="container text-center">
+                    <p>{{ video['id']['videoId'] | YouTube_Transcript }}  </p>
+                </div>
+                <span class="bottom-right-text">Uploaded on: {{video['snippet']['publishTime'] | date_format }}</span>
+            </div>
+            <div class="col" style="padding: 0;">
+                <iframe width="660" height="352" 
+                    src="https://www.youtube.com/embed/{{ video['id']['videoId'] }}" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+
+</div><!-- End of stacking columns -->
+
+{% endif %}
+
+{% endblock %}

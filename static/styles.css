@@ -1,0 +1,92 @@
+/* Allow for mouse color hover */
+.nav-link:hover{
+    color: #b71c1c;
+}
+
+/* Remain the color when the user clicks on a page */
+.nav-link.active {
+    color: #b71c1c !important; /* Highlight text color */
+  }
+
+.icon-top-left {
+    width: 75px; /* Adjust the size */
+    height: auto;
+    margin-right: 30px; /* Add spacing from the text */
+    vertical-align: middle; /* Align with text if necessary */
+    background-color: #f5ede4;
+    border-radius: 55px;
+}
+
+
+/* Used for publication date on the bottom right */
+.bottom-right-text {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #f5ede4; /* Text color */
+    padding: 5px 10px; /* Space around the text */
+    border-radius: 5px; /* Optional rounded corners */
+    font-size: 14px; /* Adjust font size as needed */
+    font-style: italic;
+}
+
+.custom-nav-main-bg-color{
+    background:#4e342e;
+}
+
+body {
+    background-color: #f5ede4;
+}
+
+.custom-nav-niche-items{
+    color:#f5ede4;
+    font-weight: bold;
+}
+
+hr.custom-divider{
+    border: 0; /* Remove default border */
+    height: 0.5em; /* Set the thickness */
+    background-color:#b71c1c; /* Set the color */
+    opacity: 1;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+hr.custom-divider-brown{
+    border: 0; /* Remove default border */
+    height: 0.5em; /* Set the thickness */
+    background-color:#4e342e; /* Set the color */
+    opacity: 1;
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+.highlight-of-the-day{
+    margin: 0px; /* Remove any margins */
+    padding: 2px; /* Increase padding (the blue around the title) */
+    background-color: #00796b;
+    color:#f5ede4;
+}
+
+.highlight-of-the-day-2{
+    margin: 0px; /* Remove any margins */
+    padding: 2px; /* Increase padding (the blue around the title) */
+    background-color: #b71c1c;
+    color:#f5ede4;
+}
+
+.quote-of-the-day {
+    color:#b71c1c;
+    margin: 0;
+}
+
+.quote-of-the-day-text{
+    color: #6c4e31;
+}
+
+.footer-text{
+    color: #6c4e31;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ niche['category'] }}
+{% endblock %}
+
+
+{% block main %}
+
+<div class="quote-of-the-day" style="padding-top: 1.5em;">
+    <h3 class="container text-center"><strong> Today's <em><span style="color: #00796b;">{{ niche['category'] }}</span></em> News Summary</strong></h3>
+</div>
+<br>
+
+<!-- Beginning of stacking columns -->
+<div class="container text-center">
+    
+    {% for article in niche['news'] %}
+    {% if loop.index is odd %}
+        <div class="row d-flex align-items-stretch">
+            
+            <div class="col" style="padding: 0;">
+                <a href="{{ article['url'] }}">
+                <img style="display: block; margin: 0;" width="660" height="352" src="{{ article['urlToImage'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></img>
+                </a>
+            </div>
+            
+            <div class="col position-relative"  style="background-color: #4e342e; color: #f5ede4; margin: 0; padding: 0;">
+                <h3 class="highlight-of-the-day">{{ article['title']}}</h3>
+                <div class="container text-center">
+                    <p>{{ article['description']}} </p>
+                </div>
+                <span class="bottom-right-text">Published {{article['publishedAt'] | date_format }}</span>
+            </div>
+         
+        </div>
+
+    <br>
+
+    {% else %}
+        <div class="row d-flex align-items-stretch">
+            <div class="col position-relative" style="background-color: #494240; color: #f5ede4; margin: 0; padding: 0;">
+                <h3 class="highlight-of-the-day-2">{{ article['title']}}</h3>
+                <div class="container text-center">
+                    <p>{{ article['description']}}</p>
+                </div>
+                <span class="bottom-right-text">Published {{ article['publishedAt'] | date_format }}</span>
+            </div>
+            <div class="col" style="padding: 0;">
+                <a href="{{ article['url'] }}">
+                    <img style="display: block; margin: 0;" width="660" height="352" src="{{ article['urlToImage'] }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></img>
+                </a>
+            </div>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+
+</div><!-- End of stacking columns -->
+
+
+{% endblock %}
