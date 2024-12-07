@@ -1,5 +1,5 @@
 # Positive News App - 'Start The Ripple'
-#### Video Demo:  https://youtu.be/ReaEDPznlb0
+#### Video Demo:  https://youtu.be/X5JOn7fd1BY
 #### Description: This is a positive news application built with Python, Flask, HTML, CSS, Jinja, and multiple Python libraries and APIs. Its purpose is to deliver uplifting and inspiring news by aggregating articles and videos from various niches.
 
 # Positive News Application
