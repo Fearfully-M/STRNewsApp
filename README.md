@@ -1,6 +1,6 @@
 # Positive News App - 'Start The Ripple'
-#### Video Demo:  <URL HERE>
-#### Description:
+#### Video Demo:  https://youtu.be/ReaEDPznlb0
+#### Description: This is a positive news application built with Python, Flask, HTML, CSS, Jinja, and multiple Python libraries and APIs. Its purpose is to deliver uplifting and inspiring news by aggregating articles and videos from various niches.
 
 # Positive News Application
 
@@ -46,7 +46,7 @@ Additionally, the project explores positive content on YouTube and summarizes it
    - Summarizes transcripts using the **Hugging Face Transformer API**.
 
 3. **Clean and User-Friendly Design:**
-   - Designed with **Figma** before implementation, emphasizing a polished and intuitive user experience.
+   - Designed with **Figma** before implementation, emphasizing a polished and intuitive user experience (*hopefully*).
 
 ---
 
@@ -54,13 +54,13 @@ Additionally, the project explores positive content on YouTube and summarizes it
 
 1. **NewsAPI**  
    - Fetches articles from major news outlets.  
-   - Free tier limits to 4 niches to avoid costs.
+   - Free tier limits to 4 niches to avoid costs and for pragmatic implementation.
 
 2. **YouTube API**  
-   - Retrieves videos based on niche-related keywords.  
+   - Retrieves videos based on niche-related keywords (behind the scenes in the back-end).  
 
 3. **Transcript API**  
-   - Fetches manually or auto-generated transcripts for YouTube videos.
+   - Fetches manually or auto-generated transcripts (for videos without a transcript) for YouTube videos.
 
 4. **Hugging Face Transformer API**  
    - Summarizes video transcripts using the **BART** model.
@@ -72,13 +72,18 @@ Additionally, the project explores positive content on YouTube and summarizes it
 
 ### Initial Challenges:
 - Overcoming uncertainty about API integration and web hosting.
-- Managing the scope of the project to ensure it was challenging but feasible.
+- Managing the scope of the project to ensure it was challenging but doable.
 
 ### Key Learnings:
 - **API Integration:** Learned to work with multiple APIs and process data for a real-world application.
 - **Cache Management** Learned at a elementary level of how to cache the API results to reduce the number of API calls needed
 - **Web Deployment:** Successfully hosted the project online, allowing external access to the application (Not meant for other uses as API costs are signicate outside of free tiers).
 - **Design Tools:** Explored **Figma** for the first time, gaining insight into its value for front-end and UX design.
+
+
+### Some Realizations
+- This project helped me realize the benefits and challenges of what developers often call a "band-aid" or "lego" approach—connecting APIs and libraries to build solutions. While this method is excellent for learning new tools and understanding what's possible with code, relying on it too much could hinder a developer's growth by minimizing the need for creative problem-solving. As a first-time experience, I found this approach both challenging and insightful. It pushed me to think creatively and revealed just how many tools are available for rapid prototyping and problem-solving. However, I also noticed the trade-offs: increased dependencies, a higher likelihood of issues arising, and the potential cost of relying heavily on third-party technologies.
+This project gave me valuable insights I wouldn’t have gained otherwise.
 
 ---
 
@@ -101,7 +106,7 @@ Additionally, the project explores positive content on YouTube and summarizes it
 
 1. Visit the homepage to explore uplifting news from various niches.
 2. Click on an article to read more on the original source.
-3. Navigate to the YouTube page to find summarized videos.
+3. Navigate to the YouTube page to find summarized videos via their transcripts.
 
 ## Limitations
 
@@ -111,12 +116,16 @@ Tokenization Limits:
 
 Performance:
 
-    Using a cloud-based Hugging Face API results in slow loading times, especially on the YouTube page, where transcript summarization can take up to a minute.
+    Using a cloud-based Hugging Face API results in slow loading times, especially on the YouTube page, where transcript summarization can several minutes depending on video transcipt size and the user's computer's GPU and CPU performance.
 
 ## Future Plans
 
 - Web Scraping: Incorporate web scraping for trending news stories.
-- Trending News App: Streamline the application to focus on trending news rather than summarization, making it faster and more versatile.
-- CLI Tool: Adapt the project into a command-line tool for personal use.
+- Trending News App: Streamline the application to focus on trending news rather than summarization, making it faster, more versatile, and more pragmatic for the average user.
+- CLI Tool: Adapt the project into a command-line tool for personal use. 
 
-This project has been a significant learning experience, and I’m proud of what I’ve accomplished. Despite its limitations, it’s a functional application that tackles real-world challenges and demonstrates growth in API integration and deployment.
+## Reflections and Gratitude
+
+This project has been a significant learning experience, and I’m proud of what I’ve accomplished. Despite its limitations, it’s a functional application that tackles real-world challenges and demonstrates growth in API integration and deployment. Before doing the project I was completely mystified by how API's worked, how to deploy a web application online, how Figma worked, and didn't even know there were tier plans for APIs. 
+
+Thank you everyone who made CS50 and CS50X possible. I know you hear it all the time but it's trully amazing that an education like this is available for free, on the internet, and can be accessed from anywhere. I always find it important to not become complacent in appreciating opprotunities like this because it can be easy to not realize how good most of us have things now and many, many people are never presented opprotunites like this and much less even take advantage of them. Thank you
