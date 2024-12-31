@@ -91,7 +91,7 @@ This project gave me valuable insights I wouldn’t have gained otherwise.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/positive-news-app.git
+   git clone https://github.com/Fearfully-M/positive-news-app.git
    cd positive-news-app
 2. pip install -r requirements.txt
 3. Set up API Keys:
